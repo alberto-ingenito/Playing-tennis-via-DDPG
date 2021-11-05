@@ -17,8 +17,8 @@ Since each agent receives local observations and own rewards and since the game 
 As by DDPG, the model consists of two deep neural networks: one, the 'actor', trained to estimate the *best* action to pick in a certain state, and an other one, the critic, trained to estimate the value (future expected rewards) of the action suggested by the actor; in turn, the value is used to train the actor in the estimation of the *best* action in the given state. Two additional clones of the models (target models) slowly track the previous ones (the parameters are slightly shifted in their direction) and are exclusively employed in the training phase to improve convergence properties of the algorithm.
 
 ## The solution
-Once trained, the agent can be seen in action in the Unity environment.    
-#[Click here to take a #look!](https://user-images.githubusercontent.com/53077127/138491669-c4abcc72-b5bb-44da-90fc-d1b8786626cd.mp4)
+Once trained, the agent can be seen in action in the Unity environment: ![image](https://user-images.githubusercontent.com/53077127/140544361-daaf4925-fa6b-4408-8119-19cf42f339c6.png)
+[Click here to see the agent in action!](https://user-images.githubusercontent.com/53077127/140544217-ee3ed577-5d84-4ad3-9102-c4a6fa688341.mp4)
 
 ## Installation
 Follow the instructions in the [DRLND GitHub repository](https://github.com/udacity/deep-reinforcement-learning#dependencies) to set up your Python environment. These instructions can be found in README.md at the root of the repository. You will install PyTorch, the ML-Agents toolkit, and a few more Python packages required to run the project.
