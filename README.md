@@ -28,7 +28,7 @@ Follow the instructions in the [DRLND GitHub repository](https://github.com/udac
 
 Note: the project is provided with pre-built Unity environemnt for Windows 10 (64 bit). Other operating systems need custom environment.
 
-## Try it for yourselft!
+## Try it for yourself!
 Open the Jupyter notebook: Continuous_Control.ipynb 
 Run steps from 1 to 4 to train an agent.  
 Run step 5 if you want to watch the agent play. If you don't train it, a pre-trained version is available.    
