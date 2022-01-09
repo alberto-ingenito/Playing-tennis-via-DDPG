@@ -12,13 +12,13 @@ The environment simulates the physics of two rackets bouncing a ball over a net.
 
 The environment generates 'observations' for the agents (position and velocities of rackets and ball) which in turn react with 'actions' over the rackets (moves and 'jumps').
 
-In details, the observation for one agent consist of position and velocity (both are bi-dimensional variables) of ball and racket sampled at three consecutive time steps; hence, we have 2 variables x 2 dimension x 2 objects (racket and ball) x 3 time steps = 24 continuous variables for observation. Two actions can be actuated by each agent: moving toward/away from the net and jumping. Every action must be a number between -1 and 1.
+In details, the observation for one agent consists of position and velocity (both are bi-dimensional variables) of ball and racket sampled at three consecutive time steps; hence, we have 2 variables x 2 dimensions x 2 objects (racket and ball) x 3 time steps = 24 continuous variables for observation. Two actions can be actuated by each agent: moving toward/away from the net and jumping. Every action must be a number between -1 and 1.  [//]: # (check this)
 
 The task is episodic, and in order to solve the environment, the *winner* agent must get an average score of +0.5 over 100 consecutive episodes.
 
 Since each agent receives own observations and rewards and given the simmetry of the game, both agents can be trained as one only agent. In other words, they can be considered as one self-playing agent. Therefore, the experience gathered by both of them is collected in a common memory buffer and then sampled to train a common model. 
 
-As by DDPG, the model consists of two deep neural networks: one, the 'actor', is trained to estimate the *best* action to pick in a certain state while the other, the critic, is trained to estimate the value (future expected rewards) of the picked action; in turn, the action-value is used to train the actor in the next estimations of the *best* action in any given state. Two additional clones of the models (target models) slowly track the previous ones (their parameters are slowly updated in accordance) and are exclusively employed on training to improve the convergence properties of the algorithm.
+As by DDPG, the model consists of two deep neural networks: one, the 'actor', is trained to estimate the *best* action to pick in a certain state while the other, the critic, is trained to estimate the value (future expected rewards) of the picked action; in turn, the action-value is used to train the actor in the next estimations of the *best* action in any given state. Two additional clones of the models (target models) slowly track the previous ones (their parameters are slowly updated in accordance) and are exclusively employed on training to improve the convergence properties of the algorithm.[//]: # (check this)
 
 ## The solution
 Once trained, the agent can be seen in action in the Unity environment.   
